@@ -1,0 +1,48 @@
+---
+title: "Dr D is Learning Github"
+output: html_notebook
+---
+
+
+OK, I know next to nothing about github. Let's figure out how to use it, one step at a time...
+
+a) Main Point of Git - keep track of the changes you make to a file and your work
+
+b) Multiple people can work on a document at a same time and different versions can exist - github will flag different versions etc. 
+
+c) You can publish your work and others can see it online
+
+1.  - Install git
+
+Go to http://github.com and install github
+
+2.  - Go to github.com and create a new repository
+
+Check 'initialise new repository with a README'
+
+3.  - You now need to clone this repository that you have created online and put it in a local folder on your computer. There are a couple of ways of doing this...
+
+Using the Commandline:
+
+4.  - Copy the Clone URL for your repo from the website
+
+5.  - Open a Terminal via the 'git cmd' option in programmes
+
+6. Change drive to the N: drive with N:
+
+dir to list files
+
+git clone https://github.com/adamdennett/teaching.git 
+
+
+-------------------
+7. Open RStudio. In RStudio Tools > Global Options and Allow Version Control for new Projects
+
+8. Create a new project in an existing directory - choose your new git repository on the N drive as your new project folder
+
+9. Open a new R Notebook or Rmd file
+
+10. Type some stuff at the top of the file and save it
+
+
+
