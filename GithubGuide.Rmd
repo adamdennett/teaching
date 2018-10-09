@@ -44,5 +44,5 @@ git clone https://github.com/adamdennett/teaching.git
 
 10. Type some stuff at the top of the file and save it
 
-
+11. As well as saving, we will also 'commit' or create a save point for our work on git
 
