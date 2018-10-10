@@ -1,48 +1,63 @@
 ---
-title: "Dr D is Learning Github"
+title: "Producing Reproducible Research Using RMarkdown and Github"
 output: html_notebook
 ---
 
+In this practical session, you will learn how to produce work that is open, reproducible and portable using RStudio, RMarkdown, Git and Github. 
 
-OK, I know next to nothing about github. Let's figure out how to use it, one step at a time...
+* [RStudio](https://www.rstudio.com/) is a graphical user interface (that you should already be familiar with) - it contains a number of features which make it excellent for authoring reproducible and open geographic data science work. 
 
-a) Main Point of Git - keep track of the changes you make to a file and your work
+* RMarkdown is a version of the [Markdown](https://en.wikipedia.org/wiki/Markdown) markup language which enables plain text to be formatted to contain links to data, code to run, text to explain what you a producing and metadata to tell your software what kinds of outputs to generate from your markdown code. For more information on RMarkdown, visit [here](https://rmarkdown.rstudio.com/lesson-1.html).
 
-b) Multiple people can work on a document at a same time and different versions can exist - github will flag different versions etc. 
+* [Git](https://git-scm.com/) is a software version control system which allows you to keep track of the code you produce and the changes that you or others make to it. 
 
-c) You can publish your work and others can see it online
+* [GitHub](https://github.com/) is an online repository that allows anyone to view the code you have produced (in whatever language you choose to program in) and use/scrutinise/contribute to/comment on it.  
 
-1.  - Install git
+###Setting up GitHub to store your code
 
-Go to http://github.com and install github
+1. If you are working on your own computer, you will first need to install git - https://git-scm.com/ - if you are working on the UCL Remote Desktop, you won't need to do this as it is already installed for you. 
 
-2.  - Go to github.com and create a new repository
+2. Go to http://github.com and install github (if working on your own computer). Create an account and create a new repository (call it anything you like - 'gis_code' or something similar), making sure it is public and you check the box that says 'initialise new repository with a README' - click 'create repository' at the bottom
 
-Check 'initialise new repository with a README'
-
-3.  - You now need to clone this repository that you have created online and put it in a local folder on your computer. There are a couple of ways of doing this...
-
-Using the Commandline:
-
-4.  - Copy the Clone URL for your repo from the website
-
-5.  - Open a Terminal via the 'git cmd' option in programmes
-
-6. Change drive to the N: drive with N:
-
-dir to list files
-
-git clone https://github.com/adamdennett/teaching.git 
+![repo](images/git_repo_setup.png)
 
 
--------------------
-7. Open RStudio. In RStudio Tools > Global Options and Allow Version Control for new Projects
+3. Your new repository ('repo') will be created and this is where you will be able to store your code online. You will notice that a README.md markdown file has also been created. This can be edited to tell people what they are likely to find in this repository.  
 
-8. Create a new project in an existing directory - choose your new git repository on the N drive as your new project folder
+4. Now you have created your repo online, you need to 'clone' it so that there is an identical copy of it in a local folder on your computer. 
 
-9. Open a new R Notebook or Rmd file
+There are a couple of ways of doing this, but the easy one is to use the GUI that comes packaged with your git installation. 
 
-10. Type some stuff at the top of the file and save it
+5. The first thing you need to do is copy the Clone URL for your repo from the github website - click the green button in your repo for 'Clone or Download' and copy the link:
+
+![repo](images/copy_clone_link.png)
+
+6. Now in the windows start menu, go to git > GUI 
+
+![gui1](images/git_gui1.png)
+
+
+7. Select 'Clone Existing Repository' and paste the link from your GitHub account into the top box and the local directory that you want to create to store your repo in the bottom box (*note, you will need to add a name for a new folder, once you have selected an existing directory*).
+
+![gui1](images/git_gui2.png)
+
+8. After a few moments, you should now be able to view a copy of your GitHub repo on your local machine. This is where you will be able to store all of your code and some other files for your reproducible research. 
+
+###Using RStudio with git
+
+Now, as I've mentioned before, RStudio is totally bad-ass. Not only does it make R fun to use, but the lovely people who created it also built in support for things like git!
+
+Before you can use this functionality, you need to enable it:
+
+9. Open RStudio. In RStudio Tools > Global Options, under 'Git/SVN' check the box to allow version control and locate the folder on your computer where the git.exe file is located.  and Allow Version Control for new Projects and navigate to where the git.exe file is on your computer. Click OK. 
+
+![gui1](images/rstudio_allow_version.png)
+
+10. Now in RStudio, you should create a new project in an existing directory - File > New Project > Existing directory - choose your new git repository as your new project folder. You may not need to restart RStudio. 
+
+11. Open a new R Notebook or Rmd file
+
+12. Type some stuff at the top of the file and save it
 
 11. As well as saving, we will also 'commit' or create a save point for our work on git
 
