@@ -79,4 +79,5 @@ Before you can use this functionality, you need to enable it:
 
 18. Once you are happy with your progress, you should also then 'Push' your changes to your online GitHub repo. This is important, both for backing up your work, but also for keeping a reproducable record of your research. 
 
-19. To do this, first make sure you have committed any changes to your local cloned repo and then click the 'Push' button to whizz your code up to your master GitHub repo
+19. To do this, first make sure you have committed any changes to your local cloned repo and then click the 'Push' button to whizz your code up to your master GitHub repo - you will probably be prompted to enter your github username and password to enable this...
+
