@@ -1,13 +1,12 @@
 ---
 title: "Producing Reproducible Research Using RMarkdown and Github"
 output:
-  
-  github_document: default
+  html_notebook: default
+  word_document: default
   
 author: Adam Dennett
 bibliography: 
  - RReferences.bib
-  
 ---
 
 In this practical session, you will learn how to produce work that is open, reproducible and portable using RStudio, RMarkdown, Git and Github. 
@@ -130,6 +129,7 @@ Now, earlier on in this exercise, I got you to open a new R Notebook or R Markdo
 23. A box will appear and in this box, you will be able to enter and run your R code. Try pasting in:
 
 ```{r echo=TRUE, warning=FALSE}
+
 library(tidyverse)
 library(geojsonio)
 library(sf)
@@ -175,9 +175,7 @@ I won't go into BibTeX now, but if you go on to write your dissertation using [L
  
 ![Figure 10 - Zotero Export](images/zotero_export.png)
 
-27. Once saved into the same directory as your Markdown project (your 
-
-27. Once your BibTex file is saved into the same directory as your, you can then tell your markdown document where to find the in the YAML text at the very top of your file:
+27. Once your BibTex file is saved into the same directory as your Markdown document, you can then tell it where to find the bibliography in the YAML text at the very top of the file:
 
 ```{r echo=TRUE, eval=FALSE}
 ---
@@ -192,5 +190,7 @@ bibliography:
   
 ---
 ```
+
+###Adding References Using `citr` 
 
 
