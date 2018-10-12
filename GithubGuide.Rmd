@@ -58,7 +58,13 @@ For a full and excellent tutorial on using Git with R Studio, watch this webinar
 
 If you don't want to watch the vid, I'll do a quick summary below. So, to use git, first you need to enable it in RStudio:
 
-9. Open RStudio. In RStudio Tools > Global Options, under 'Git/SVN' check the box to allow version control and locate the folder on your computer where the git.exe file is located.  and Allow Version Control for new Projects and navigate to where the git.exe file is on your computer. Click OK. 
+####Issues with the RStudio Installation on the UCL Remote Desktop
+
+At the time of writing, because of the way that RStudio has been installed on the UCL Remote Desktop, git integration does not work. As such, if you are working on the remote desktop, DO NOT follow instructions 9 to 19 below. If you are working on your own computer then fine, carry on. 
+
+###Using RStudio with git, continued... 
+
+9. Open RStudio. In RStudio Tools > Global Options, under 'Git/SVN' check the box to allow version control and locate the folder on your computer where the git.exe file is located. Allow Version Control for new Projects and navigate to where the git.exe file is on your computer. Click OK. 
 
 ![Figure 5 - Allow Version Control](images/rstudio_allow_version.png)
 
@@ -193,4 +199,26 @@ bibliography:
 ```
 
 ###Adding References Using `citr` 
+
+28. In order to add add citations from your bibliography, you can use the `citr` package, which creates an addin within RStudio
+
+```{r echo=TRUE, eval=FALSE}
+install.packages("citr")
+library(citr)
+```
+
+29. In the 'Addins' menu near the top of RStudio, you should (once RStudio has been restarted) have a `citr` option for 'Insert citations' and including them in your work.
+
+![Figure 11 - Citr Addin](images/addins_citr.png)
+
+30. Try adding some citations from your BibTeX library... You will find that 
+
+@dennett_geography_2017
+
+[@xie_r_2018] 
+
+@xie_r_2018
+
+##References
+
 
