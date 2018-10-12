@@ -1,13 +1,14 @@
 ---
 title: "Producing Reproducible Research Using RMarkdown and Github"
 output:
-  
   github_document: default
   
 author: Adam Dennett
 bibliography: 
  - RReferences.bib
   
+  html_notebook: default
+  word_document: default
 ---
 
 In this practical session, you will learn how to produce work that is open, reproducible and portable using RStudio, RMarkdown, Git and Github. 
@@ -130,6 +131,7 @@ Now, earlier on in this exercise, I got you to open a new R Notebook or R Markdo
 23. A box will appear and in this box, you will be able to enter and run your R code. Try pasting in:
 
 ```{r echo=TRUE, warning=FALSE}
+
 library(tidyverse)
 library(geojsonio)
 library(sf)
@@ -192,5 +194,3 @@ bibliography:
   
 ---
 ```
-
-
