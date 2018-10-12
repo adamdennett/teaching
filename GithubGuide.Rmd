@@ -3,7 +3,8 @@ title: "Producing Reproducible Research Using RMarkdown and Github"
 output:
   html_notebook: default
   word_document: default
-  
+  github_document: default
+
 author: Adam Dennett
 bibliography: 
  - RReferences.bib
@@ -192,5 +193,4 @@ bibliography:
 ```
 
 ###Adding References Using `citr` 
-
 
