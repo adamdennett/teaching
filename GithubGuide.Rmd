@@ -60,7 +60,7 @@ If you don't want to watch the vid, I'll do a quick summary below. So, to use gi
 
 ####Issues with the RStudio Installation on the UCL Remote Desktop
 
-At the time of writing, because of the way that RStudio has been installed on the UCL Remote Desktop, git integration does not work. As such, if you are working on the remote desktop, DO NOT follow instructions 9 to 19 below. If you are working on your own computer then fine, carry on. 
+At the time of writing, because of the way that RStudio has been installed on the UCL Remote Desktop, git integration does not work. As such, if you are working on the remote desktop, DO NOT follow instructions 9 to 19 below, jump straight to instruction 20. If you are working on your own computer then fine, carry on. 
 
 ###Using RStudio with git, continued... 
 
@@ -102,13 +102,34 @@ You can also click the Git tab that will have appeared in the top-right window o
 
 ![Figure 8 - Pushing to GitHub](images/git_push_pw.png)
 
+###Git without RStudio Integration
+
+Now, if you would like to use git but your're working on the UCL Remote Desktop or you are experiening other problems with getting git working in RStudio, fear not, you can just use your raw git installation.
+
+20. In the Start Menu, open the git GUI. Start > Git > Git GUI. You should open the existing repository that you have just created.
+
+21. Whenever you have made some changes to your files in your cloned repo, you can use git to review the changes and 'Commit' (save) them and then 'Push' them up to your master repository on GitHub.
+
+22. To review and commit your changes, in the commit menu, simply: 
+
+a) scan for changes
+b) stage them ready for committing
+c) commit the changes
+d) push the changes to your GitHub repo
+
+![Figure 9 - Git Gui Commit](images/git_push_pw.png)
+
+23. Try it. Add some new text to your .Rmd file. Save it. Rescan in the Git GUI to check for changes. Stage those changes one-by-one. Commit them (remembering to input a commit message). Then once committed, try using Remote > Push to send the changes to github (*note, you will be asked for your username and password to complete this.)
+
 ####Possible git problems
 
-20. There are many many possible git problems. As you continute to commit and push work, especially when using different clones, you may well run into things like merge conflicts and a whole load of other problems. I've just been trying to fix a merge conflict for the last hour and eventually got there. It's not easy. It's not pretty, but as ever, there is usually a guide somewhere on the internet to help you. 
+24. There are many many possible git problems. As you continute to commit and push work, especially when using different clones, you may well run into things like merge conflicts and a whole load of other problems. I've just been trying to fix a merge conflict for the last hour and eventually got there. It's not easy. It's not pretty, but as ever, there is usually a guide somewhere on the internet to help you. 
 
 For merge conflicts, try here: https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/ 
 
 For general github help, try here: https://help.github.com/ 
+
+
 
 ##Reproducible Research Using R Markdown
 
@@ -127,13 +148,13 @@ One of the awesome things about R Markdown is it can be converted into a range o
 
 Now, earlier on in this exercise, I got you to open a new R Notebook or R Markdown file. They are both R Markdown Documents, but the Notebook allows chunks of code to be run independently. 
 
-21. Go back to the notebook you created earlier in step 11. We are now going to insert some code from the practical last week and run it. 
+25. Go back to the notebook you created earlier in step 11. We are now going to insert some code from the practical last week and run it. 
 
-22. In RStudio, you can either select Code > Insert Chunk or you can Click the 'Insert' button and insert an R Chunk
+26. In RStudio, you can either select Code > Insert Chunk or you can Click the 'Insert' button and insert an R Chunk
 
 ![Figure 8 - Insert R Chunk](images/Insert_code_chunk.png)
 
-23. A box will appear and in this box, you will be able to enter and run your R code. Try pasting in:
+27. A box will appear and in this box, you will be able to enter and run your R code. Try pasting in:
 
 ```{r echo=TRUE, warning=FALSE}
 
@@ -157,11 +178,11 @@ LondonMapSF <- append_data(LondonMapSF,LondonData, key.shp = "lad15cd", key.data
 qtm(LondonMapSF, fill = "% Not Born in UK - 2011")
 ```
 
-24. When including code chunks in your work, there are various options that allow you to do things like include the code, but not run it: display the output but not the code, hide warnings etc. Most of these can be input automatically by clicking the cog icon in the top-right of the chunk.
+28. When including code chunks in your work, there are various options that allow you to do things like include the code, but not run it: display the output but not the code, hide warnings etc. Most of these can be input automatically by clicking the cog icon in the top-right of the chunk.
 
 ![Figure 9 - Chunk Options](images/chunk_options.png)
 
-25. Various other options and tips can be found in the full R Markdown guide on RStudio here: https://rmarkdown.rstudio.com/lesson-1.html and in this the cheatsheets linked to above.
+29. Various other options and tips can be found in the full R Markdown guide on RStudio here: https://rmarkdown.rstudio.com/lesson-1.html and in this the cheatsheets linked to above.
 
 ##Adding References to Your Work
 
@@ -177,12 +198,12 @@ The aim is to get a list of references that are stored in a format known as `Bib
 
 I won't go into BibTeX now, but if you go on to write your dissertation using [LaTeX](https://www.latex-project.org/), then BibTeX is the format that you will use to store your references. 
 
-26. Having built up a bibliograpy of relevant literature in zotero, you should export it in BibTeX format and save it to the same directory that your R Markdown project is located in. Go to File > Export Library and select BibTeX as your format. 
+30. Having built up a bibliograpy of relevant literature in zotero, you should export it in BibTeX format and save it to the same directory that your R Markdown project is located in. Go to File > Export Library and select BibTeX as your format. 
 
  
 ![Figure 10 - Zotero Export](images/zotero_export.png)
 
-27. Once your BibTex file is saved into the same directory as your Markdown document, you can then tell it where to find the bibliography in the YAML text at the very top of the file:
+31. Once your BibTex file is saved into the same directory as your Markdown document, you can then tell it where to find the bibliography in the YAML text at the very top of the file:
 
 ```{r echo=TRUE, eval=FALSE}
 ---
@@ -200,18 +221,18 @@ bibliography:
 
 ###Adding References Using `citr` 
 
-28. In order to add add citations from your bibliography, you can use the `citr` package, which creates an addin within RStudio
+32. In order to add add citations from your bibliography, you can use the `citr` package, which creates an addin within RStudio
 
 ```{r echo=TRUE, eval=FALSE}
 install.packages("citr")
 library(citr)
 ```
 
-29. In the 'Addins' menu near the top of RStudio, you should (once RStudio has been restarted) have a `citr` option for 'Insert citations' and including them in your work.
+33. In the 'Addins' menu near the top of RStudio, you should (once RStudio has been restarted) have a `citr` option for 'Insert citations' and including them in your work.
 
 ![Figure 11 - Citr Addin](images/addins_citr.png)
 
-30. Try adding some citations from your BibTeX library... You will find that 
+34. Try adding some citations from your BibTeX library... You will find that 
 
 @dennett_geography_2017
 
