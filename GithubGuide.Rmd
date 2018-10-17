@@ -35,7 +35,7 @@ In this practical session, you will learn how to produce work that is open, repr
 
 * [GitHub](https://github.com/) is an online repository that allows anyone to view the code you have produced (in whatever language you choose to program in) and use/scrutinise/contribute to/comment on it.  
 
-#Setting up GitHub to store your code
+# Setting up GitHub to store your code
 
 (@) If you are working on your own computer, you will first need to install git - https://git-scm.com/ - if you are working on the UCL Remote Desktop, you won't need to do this as it is already installed for you. 
 
@@ -73,11 +73,11 @@ For a full and excellent tutorial on using Git with R Studio, watch this webinar
 
 If you don't want to watch the vid, I'll do a quick summary below. So, to use git, first you need to enable it in RStudio:
 
-##Issues with the RStudio Installation on the UCL Remote Desktop
+## Issues with the RStudio Installation on the UCL Remote Desktop
 
 At the time of writing, because of the way that RStudio has been installed on the UCL Remote Desktop, git integration does not work. As such, if you are working on the remote desktop, DO NOT follow instructions 9 to 19 below, jump straight to instruction 20. If you are working on your own computer then fine, carry on. 
 
-#Using RStudio with git, continued... 
+# Using RStudio with git, continued... 
 
 (@) Open RStudio. In RStudio Tools > Global Options, under 'Git/SVN' check the box to allow version control and locate the folder on your computer where the git.exe file is located. Allow Version Control for new Projects and navigate to where the git.exe file is on your computer. Click OK. 
 
@@ -85,7 +85,7 @@ At the time of writing, because of the way that RStudio has been installed on th
 
 (@) Now in RStudio, you should create a new project in an existing directory - File > New Project > Existing directory - choose your new git repository as your new project folder. You may not need to restart RStudio. 
 
-##Saving your work to your local cloned repo
+## Saving your work to your local cloned repo
 
 (@) Open a new R Notebook in RStudio: File > New File R Notebook
 
@@ -109,7 +109,7 @@ You can also click the Git tab that will have appeared in the top-right window o
 
 (@) If I were you, I would save R Scripts or RMarkdown Documents using the usual save button quite regularly, and then every time you, then you can commit your changes then. 
 
-##Pushing your changes to GitHub
+## Pushing your changes to GitHub
 
 (@) Once you are happy with your progress, you should also then 'Push' your changes to your online GitHub repo. This is important, both for backing up your work, but also for keeping a reproducable record of your research. 
 
@@ -136,7 +136,7 @@ d) push the changes to your GitHub repo
 
 (@) Try it. Add some new text to your .Rmd file. Save it. Rescan in the Git GUI to check for changes. Stage those changes one-by-one. Commit them (remembering to input a commit message). Then once committed, try using Remote > Push to send the changes to github (*note, you will be asked for your username and password to complete this.)
 
-##Possible git problems - Merging 
+## Possible git problems - Merging 
 
 (@) There are many many possible git problems. I've just started with this and have come across loads (mainly to do with merging) already. As you continute to commit and push work, especially when using different clones, you may well run into things like merge conflicts and a whole load of other problems. I've just been trying to fix a merge conflict for the last hour and eventually got there. It's not easy. It's not pretty. But as ever, there is usually a guide somewhere on the internet to help you. 
 
@@ -148,7 +148,7 @@ For general github help, try here: https://help.github.com/
 
 Good luck!!
 
-#Reproducible Research Using R Markdown
+# Reproducible Research Using R Markdown
 
 OK, so now you have set everything up so that you can become a reproducable research ninja! All that remains is to do some reproducable research!
 
@@ -201,13 +201,13 @@ qtm(LondonMapSF, fill = "% Not Born in UK - 2011")
 
 (@) Various other options and tips can be found in the full R Markdown guide on RStudio here: https://rmarkdown.rstudio.com/lesson-1.html and in this the cheatsheets linked to above.
 
-#Adding References to Your Work
+# Adding References to Your Work
 
 Now, as you build up your documentation for the work you are doing, it is likely that you will want to include references to support your arguments. 
 
 Building a bibliography in your R Markdown document is quite simple, you will just need to install some additional packages that plug into RStudio and learn how to export your bibliography from your reference management software. 
 
-##Exporting a bibliography from Zotero
+## Exporting a bibliography from Zotero
 
 Here I will assume that you are going to be using Zotero as your reference management software. If you use other software, there are probably similar options for exporting available to you, so don't worry. 
 
@@ -236,7 +236,7 @@ bibliography:
 ---
 ```
 
-##Adding References Using `citr` 
+## Adding References Using `citr` 
 
 (@) In order to add add citations from your bibliography, you can use the `citr` package, which creates an addin within RStudio
 
@@ -253,6 +253,8 @@ library(citr)
 
 Here is a reference for a seminal and totally game changing paper by @dennett_geography_2017. Here is another reference [@xie_r_2018] that heped me write this post. And look at how they all stack up alphabetically below...
 
-##References
+## Further Reading
+
+## References
 
 
